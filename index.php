@@ -7,6 +7,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	<style>
 	html, body {
@@ -15,7 +16,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	}
 	body {
 		background: #DDD;
-		font: 15px Inconsolata, sans-serif;
+		font: 15px 'Open Sans', sans-serif;
 	}
 	* {
 		line-height: 1em;
