@@ -21,7 +21,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	}
 	#sidebar {
 		background: #546E7A;
-		box-shadow: 0 0 10px black;
+		box-shadow: 0 0 20px rgba(0,0,0,0.25);
 		height: 100%;
 		position: fixed;
 		left: 0;
@@ -35,7 +35,10 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 </head>
 <body>
 	<aside id="sidebar"></aside>
-	<div id="content">Logged in as <?php echo $_SESSION['username']; ?>.</div>
-	<a href="logout.php">Logout</a>
+	<div id="content">
+		Logged in as <?php echo $_SESSION['username']; ?>.
+		<a href="logout.php">Logout</a>
+	</div>
+	
 </body>
 </html>
