@@ -71,8 +71,8 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	<aside id="sidebar">
 		<section id="user-links">
 			<ul>
-				<li><a href="user.php"><?php echo $_SESSION['username']; ?></a></li>
-				<li><a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+				<li><a href="user.php"><i class="fa fa-fw fa-user"></i><?php echo $_SESSION['username']; ?></a></li>
+				<li><a href="logout.php"><i class="fa fa-fw fa-sign-out"></i></a></li>
 			</ul>
 		</section>
 	</aside>
