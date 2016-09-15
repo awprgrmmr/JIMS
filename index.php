@@ -2,6 +2,10 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<style>
+	html, body {
+		height: 100%;
+		margin: 0;
+	}
 	body {
 		background: #000000 url(background.jpg);
 		background-size: cover;
@@ -11,21 +15,21 @@
 		align-items: center;
 	}
 	
-    #login label {
-        background: black;
-    	border: 1px solid rgba(255,255,255,0.8);
-    	border-bottom-left-radius: 3px;
-    	border-top-left-radius: 3px;
-    	color: white;
-    	padding: 4px 8px;
-    }
+	#login label {
+		background: black;
+		border: 1px solid rgba(255,255,255,0.8);
+		border-bottom-left-radius: 3px;
+		border-top-left-radius: 3px;
+		color: white;
+		padding: 4px 8px;
+	}
 	#login input {
 		background: rgba(255,255,255,0.8);
 		border: none;
-    	border-bottom-right-radius: 3px;
-    	border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border-top-right-radius: 3px;
 		font: 14px 'Open Sans', sans-serif;
-    	margin-right: 10px;
+		margin-right: 10px;
 		outline: none;
 		padding: 5px;
 	}
