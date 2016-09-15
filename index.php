@@ -30,7 +30,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		text-decoration: none;
 	}
 	#sidebar {
-		background: #546E7A;
+		background: #607D8B;
 		box-shadow: 0 0 20px rgba(0,0,0,0.25);
 		color: white;
 		height: 100%;
@@ -46,7 +46,8 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		opacity: 1;
 	}
 	#user-links {
-		font-size: 12px;
+		font-size: 13px;
+		margin-top: 50px;
 		text-align: center;
 	}
 	#user-links li {
@@ -58,7 +59,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		padding: 2px 4px;
 	}
 	#user-links a .fa-sign-out {
-		color: red;
+		color: #F44336;
 	}
 	
 	#content {
