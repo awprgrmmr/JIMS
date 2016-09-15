@@ -31,7 +31,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		text-decoration: none;
 	}
 	#sidebar {
-		background: #607D8B;
+		background: #616161;
 		box-shadow: 0 0 20px rgba(0,0,0,0.25);
 		color: white;
 		height: 100%;
