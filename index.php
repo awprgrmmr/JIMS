@@ -7,40 +7,48 @@
 		margin: 0;
 	}
 	body {
-		background: #000000 url(background.jpg);
-		background-size: cover;
+		background: #999;
 		display: flex;
-		font: 14px 'Open Sans', sans-serif;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
+		font: 15px Inconsolata, sans-serif;
 	}
-	
+	* {
+		line-height: 1em;
+	}
+	header {
+		text-align: center;
+	}
 	#login label {
-		background: black;
-		border: 1px solid rgba(255,255,255,0.8);
+		background: #333333;
+		border: 1px solid #EEEEEE;
 		border-bottom-left-radius: 3px;
 		border-top-left-radius: 3px;
 		color: white;
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 12px;
 		padding: 4px 8px;
+		vertical-align: top;
 	}
 	#login input {
-		background: rgba(255,255,255,0.8);
+		background: #EEEEEE;
 		border: none;
 		border-bottom-right-radius: 3px;
 		border-top-right-radius: 3px;
-		font: 14px 'Open Sans', sans-serif;
-		margin-right: 10px;
+		font: inherit;
 		outline: none;
 		padding: 5px;
 	}
 	#login input:focus {
-		background: rgba(255,255,255,0.9);
+		background: #FFFFFF;
 	}
 	</style>
 </head>
 <body>
 
 <div id="login">
+	<header>JIMS LOGIN</header>
 	<form action="login.php">
     	<label for="username">U</label><input type="text" name="username" autocomplete="off" />
 		<label for="password">P</label><input type="password" name="password" autocomplete="off" />
