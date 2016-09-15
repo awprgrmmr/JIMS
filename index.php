@@ -1,6 +1,8 @@
 <?php
+
 session_start();
 if (!isset($_SESSION['username'])) header('Location: login.php');
+
 ?>
 <html>
 <head>
@@ -8,6 +10,6 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 </head>
 <body>
 	Logged in as <?php echo $_SESSION['username']; ?>.
-	<a href="login.php?action=logout">Logout</a>
+	<a href="logout.php">Logout</a>
 </body>
 </html>
