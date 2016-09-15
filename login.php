@@ -14,7 +14,7 @@ if (isset($_SESSION['username'])) header('Location: ./');
 		margin: 0;
 	}
 	body {
-		background: #999;
+		background: #DDD;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -22,6 +22,7 @@ if (isset($_SESSION['username'])) header('Location: ./');
 	}
 	* {
 		line-height: 1em;
+		margin: 0;
 	}
 	header {
 		font-size: 13px;
@@ -30,11 +31,11 @@ if (isset($_SESSION['username'])) header('Location: ./');
 		text-align: center;
 	}
 	#login label {
-		background: #333333;
-		border: 1px solid #EEEEEE;
+		background: #444444;
+		border: 1px solid #FFFFFF;
 		border-bottom-left-radius: 3px;
 		border-top-left-radius: 3px;
-		color: white;
+		color: #FFFFFF;
 		display: inline-block;
 		margin-bottom: 10px;
 		font-size: 12px;
@@ -42,7 +43,7 @@ if (isset($_SESSION['username'])) header('Location: ./');
 		vertical-align: top;
 	}
 	#login input {
-		background: #EEEEEE;
+		background: #FFFFFF;
 		border: none;
 		border-bottom-right-radius: 3px;
 		border-top-right-radius: 3px;
