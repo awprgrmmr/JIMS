@@ -27,6 +27,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	}
 	a {
 		color: inherit;
+		text-decoration: none;
 	}
 	#sidebar {
 		background: #546E7A;
@@ -38,11 +39,15 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		top: 0;
 		width: 250px;
 	}
-	#content {
-		margin-left: 250px;
+	#sidebar a {
+		opacity: 0.7;
+	}
+	#sidebar a:hover {
+		opacity: 1;
 	}
 	#user-links {
 		font-size: 12px;
+		text-align: center;
 	}
 	#user-links li {
 		border: 1px solid rgba(255, 255, 255, 0.2);
@@ -54,6 +59,10 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	}
 	#user-links a .fa-sign-out {
 		color: red;
+	}
+	
+	#content {
+		margin-left: 250px;
 	}
 	</style>
 </head>
