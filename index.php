@@ -1,5 +1,6 @@
 <html>
 <head>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<style>
 	html, body {
@@ -57,6 +58,14 @@
 		<br/>
 		<label for="password">P</label><input type="password" name="password" autocomplete="off"/>
 	</form>
+	<script>
+		$("input").keypress(function(event) {
+		    if (event.which == 13) {
+		        event.preventDefault();
+		        $("form").submit();
+		    }
+		});
+	</script>
 </div>
 
 </body>
