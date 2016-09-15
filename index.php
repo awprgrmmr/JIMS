@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<style>
 	html, body {
 		height: 100%;
@@ -17,6 +17,9 @@
 		line-height: 1em;
 	}
 	header {
+		font-size: 13px;
+		letter-spacing: 1px;
+		margin-bottom: 1em;
 		text-align: center;
 	}
 	#login label {
@@ -28,7 +31,7 @@
 		display: inline-block;
 		margin-bottom: 10px;
 		font-size: 12px;
-		padding: 4px 8px;
+		padding: 6px 8px;
 		vertical-align: top;
 	}
 	#login input {
@@ -50,8 +53,9 @@
 <div id="login">
 	<header>JIMS LOGIN</header>
 	<form action="login.php">
-    	<label for="username">U</label><input type="text" name="username" autocomplete="off" />
-		<label for="password">P</label><input type="password" name="password" autocomplete="off" />
+		<label for="username">U</label><input type="text" name="username" autocomplete="off"/>
+		<br/>
+		<label for="password">P</label><input type="password" name="password" autocomplete="off"/>
 	</form>
 </div>
 
