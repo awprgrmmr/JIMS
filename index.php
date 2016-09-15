@@ -34,6 +34,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	</style>
 </head>
 <body>
+	<aside id="sidebar"></aside>
 	<div id="content">Logged in as <?php echo $_SESSION['username']; ?>.</div>
 	<a href="logout.php">Logout</a>
 </body>
