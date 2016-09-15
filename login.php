@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+if (isset($_POST['username'])) $_SESSION['username'] = $_POST['username'];
+
 if (isset($_GET['action'])) unset($_SESSION['username']);
 if (isset($_SESSION['username'])) header('Location: ./');
 
