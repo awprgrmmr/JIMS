@@ -74,6 +74,12 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 </head>
 <body>
 	<aside id="sidebar">
+		<section>
+			<ul>
+				<li>Inmate List</li>
+				<li>Booking</li>
+			</ul>
+		</section>
 		<section id="user-links">
 			<ul>
 				<li><a href="user.php"><i class="fa fa-fw fa-user"></i><span><?php echo $_SESSION['username']; ?></span></a></li>
