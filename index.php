@@ -46,6 +46,17 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	#sidebar a:hover {
 		opacity: 1;
 	}
+	#sidebar section {
+		padding: 20px 0;
+	}
+	#logo {
+		letter-spacing: 5px;
+		padding: 30px;
+		text-align: center;
+	}
+	#menu a {
+		padding: 10px 20px;
+	}
 	#user-links {
 		font-size: 13px;
 		margin-top: 50px;
@@ -74,10 +85,13 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 </head>
 <body>
 	<aside id="sidebar">
+		<section id="logo">
+			<h1>JIMS</h1>
+		</section>
 		<section>
 			<ul>
-				<li>Inmate List</li>
-				<li>Booking</li>
+				<li><a href="#">Inmate List</a></li>
+				<li><a href="#">Booking</a></li>
 			</ul>
 		</section>
 		<section id="user-links">
