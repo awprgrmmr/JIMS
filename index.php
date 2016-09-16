@@ -88,7 +88,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		<section id="logo">
 			<h1>JIMS</h1>
 		</section>
-		<section>
+		<section id="menu">
 			<ul>
 				<li><a href="#">Inmate List</a></li>
 				<li><a href="#">Booking</a></li>
