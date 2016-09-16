@@ -47,7 +47,6 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		opacity: 1;
 	}
 	#sidebar section {
-		display: block;
 		padding: 20px 0;
 	}
 	#logo {
@@ -56,6 +55,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		text-align: center;
 	}
 	#menu a {
+		display: block;
 		padding: 10px 20px;
 	}
 	#user-links {
