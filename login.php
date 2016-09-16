@@ -39,7 +39,7 @@ if (isset($_SESSION['username'])) header('Location: ./');
 		display: inline-block;
 		margin-bottom: 10px;
 		font-size: 12px;
-		padding: 6px 8px;
+		padding: 7px 10px;
 		vertical-align: top;
 	}
 	#login input {
