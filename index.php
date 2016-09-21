@@ -61,6 +61,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		border-left: none;
 	}
 	#user-links {
+		float: right;
 		font-size: 13px;
 		margin: 7px;
 	}
