@@ -30,38 +30,39 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		color: inherit;
 		text-decoration: none;
 	}
-	#sidebar {
+	header {
 		background: #616161;
 		box-shadow: 0 0 20px rgba(0,0,0,0.25);
 		color: white;
-		height: 100%;
 		position: fixed;
 		left: 0;
 		top: 0;
-		width: 250px;
+		width: 100%;
 	}
-	#sidebar a {
+	header section {
+		float: left;
+	}
+	header a {
 		opacity: 0.7;
 	}
-	#sidebar a:hover {
+	header a:hover {
 		opacity: 1;
 	}
-	#sidebar section {
-		padding: 20px 0;
-	}
-	#logo {
-		letter-spacing: 5px;
-		padding: 30px;
-		text-align: center;
+	#menu li {
+		float: left;
 	}
 	#menu a {
+		border-left: 1px solid rgba(255,255,255,0.25);
 		display: block;
-		padding: 10px 20px;
+		margin: 10px 0;
+		padding: 0 10px;
+	}
+	#menu li:first-child a {
+		border-left: none;
 	}
 	#user-links {
 		font-size: 13px;
-		margin-top: 50px;
-		text-align: center;
+		margin: 7px;
 	}
 	#user-links li {
 		border: 1px solid rgba(255, 255, 255, 0.2);
@@ -80,15 +81,12 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	}
 	
 	#content {
-		margin-left: 250px;
+		margin-top: 34px;
 	}
 	</style>
 </head>
 <body>
-	<aside id="sidebar">
-		<section id="logo">
-			<h1>JIMS</h1>
-		</section>
+	<header>
 		<section id="menu">
 			<ul>
 				<li><a href="#">Inmate List</a></li>
@@ -101,8 +99,9 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 				<li><a href="logout.php"><i class="fa fa-fw fa-sign-out"></i></a></li>
 			</ul>
 		</section>
-	</aside>
+	</header>
 	<div id="content">
+		This is where the content will be.
 	</div>
 </body>
 </html>
