@@ -62,8 +62,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	}
 	#user-links {
 		float: right;
-		font-size: 13px;
-		margin: 7px;
+		margin: 6px;
 	}
 	#user-links li {
 		border: 1px solid rgba(255, 255, 255, 0.2);
@@ -77,7 +76,6 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		color: #F44336;
 	}
 	#user-links span {
-		font-size: 12px;
 		margin-left: 2px;
 	}
 	
