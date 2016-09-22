@@ -50,6 +50,7 @@ if (isset($_SESSION['username'])) header('Location: ./');
 	<header>JIMS LOGIN</header>
 	<form method="post" action="login.php">
 		<label for="username">U</label><input type="text" name="username" autocomplete="off"/>
+		<br>
 		<label for="password">P</label><input type="password" name="password" autocomplete="off"/>
 	</form>
 	<script>
