@@ -7,8 +7,6 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/header.css" rel="stylesheet">
 </head>
@@ -16,6 +14,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	<header>
 		<section id="menu">
 			<ul>
+				<li><a href="modules/dashboard.php" target="content">Inmates</a></li>
 				<li><a href="modules/inmates.php" target="content">Inmates</a></li>
 				<li><a href="modules/booking.php" target="content">Booking</a></li>
 			</ul>
