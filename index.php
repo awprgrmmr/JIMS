@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		</section>
 	</header>
 	<div id="content">
-		<iframe name="content" src="modules/dashboard.php"></iframe>
+		<?php isset($_GET['module']) ? include('modules/' . $_GET['module']) : include('modules/dashboard.php'); ?>
 	</div>
 </body>
 </html>
