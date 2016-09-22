@@ -23,7 +23,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 			<ul>
 				<li><a href="user">role</a></li>
 				<li><a href="user"><i class="fa fa-fw fa-user"></i><span><?php echo $_SESSION['username']; ?></span></a></li>
-				<li><a href="logout"><i class="fa fa-fw fa-sign-out"></i></a></li>
+				<li><a href="logout.php"><i class="fa fa-fw fa-sign-out"></i></a></li>
 			</ul>
 		</section>
 	</header>
