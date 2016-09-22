@@ -9,6 +9,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/header.css" rel="stylesheet">
+	<link href="css/modules.css" rel="stylesheet">
 </head>
 <body>
 	<header>
