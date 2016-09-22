@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	<header>
 		<section id="menu">
 			<ul>
-				<li><a href="modules/dashboard.php" target="content">Inmates</a></li>
+				<li><a href="modules/dashboard.php" target="content">Dashboard</a></li>
 				<li><a href="modules/inmates.php" target="content">Inmates</a></li>
 				<li><a href="modules/booking.php" target="content">Booking</a></li>
 			</ul>
