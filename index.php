@@ -29,7 +29,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		</section>
 	</header>
 	<div id="content">
-		<iframe name="content" src="dashboard.php"></iframe>
+		<iframe name="content" src="modules/dashboard.php"></iframe>
 	</div>
 </body>
 </html>
