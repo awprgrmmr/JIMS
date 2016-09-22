@@ -16,7 +16,6 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		<section id="menu">
 			<ul>
 				<li><a href=".">Dashboard</a></li>
-				<li><a href="inmates">Inmates</a></li>
 				<li><a href="booking">Booking</a></li>
 			</ul>
 		</section>
