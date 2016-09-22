@@ -21,7 +21,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		</section>
 		<section id="user-links">
 			<ul>
-				<li>role</li>
+				<li><a href="#">role</a></li>
 				<li><a href="user.php"><i class="fa fa-fw fa-user"></i><span><?php echo $_SESSION['username']; ?></span></a></li>
 				<li><a href="logout.php"><i class="fa fa-fw fa-sign-out"></i></a></li>
 			</ul>
