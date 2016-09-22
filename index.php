@@ -16,15 +16,15 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	<header>
 		<section id="menu">
 			<ul>
-				<li><a href="inmates.php" target="content">Inmates</a></li>
-				<li><a href="booking.php" target="content">Booking</a></li>
+				<li><a href="modules/inmates.php" target="content">Inmates</a></li>
+				<li><a href="modules/booking.php" target="content">Booking</a></li>
 			</ul>
 		</section>
 		<section id="user-links">
 			<ul>
-				<li><a href="user.php" target="content">role</a></li>
-				<li><a href="user.php" target="content"><i class="fa fa-fw fa-user"></i><span><?php echo $_SESSION['username']; ?></span></a></li>
-				<li><a href="logout.php" target="content"><i class="fa fa-fw fa-sign-out"></i></a></li>
+				<li><a href="modules/user.php" target="content">role</a></li>
+				<li><a href="modules/user.php" target="content"><i class="fa fa-fw fa-user"></i><span><?php echo $_SESSION['username']; ?></span></a></li>
+				<li><a href="logout.php"><i class="fa fa-fw fa-sign-out"></i></a></li>
 			</ul>
 		</section>
 	</header>
