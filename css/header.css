@@ -22,7 +22,7 @@ header a:hover {
 #menu a {
     border-left: 1px solid rgba(255,255,255,0.25);
     display: block;
-    margin: 10px 0;
+    margin: 8px 0;
     padding: 0 10px;
 }
 #menu li:first-child a {
@@ -42,6 +42,7 @@ header a:hover {
 }
 #user-links a .fa-sign-out {
     color: #F44336;
+    line-height: 1.25em;
 }
 #user-links span {
     margin-left: 2px;
