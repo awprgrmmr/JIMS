@@ -14,21 +14,21 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 	<header>
 		<section id="menu">
 			<ul>
-				<li><a href="modules/dashboard.php" target="content">Dashboard</a></li>
-				<li><a href="modules/inmates.php" target="content">Inmates</a></li>
-				<li><a href="modules/booking.php" target="content">Booking</a></li>
+				<li><a href="." target="content">Dashboard</a></li>
+				<li><a href="inmates" target="content">Inmates</a></li>
+				<li><a href="booking" target="content">Booking</a></li>
 			</ul>
 		</section>
 		<section id="user-links">
 			<ul>
-				<li><a href="modules/user.php" target="content">role</a></li>
-				<li><a href="modules/user.php" target="content"><i class="fa fa-fw fa-user"></i><span><?php echo $_SESSION['username']; ?></span></a></li>
-				<li><a href="logout.php"><i class="fa fa-fw fa-sign-out"></i></a></li>
+				<li><a href="user" target="content">role</a></li>
+				<li><a href="user" target="content"><i class="fa fa-fw fa-user"></i><span><?php echo $_SESSION['username']; ?></span></a></li>
+				<li><a href="logout"><i class="fa fa-fw fa-sign-out"></i></a></li>
 			</ul>
 		</section>
 	</header>
 	<div id="content">
-		<?php isset($_GET['module']) ? include('modules/' . $_GET['module']) : include('modules/dashboard.php'); ?>
+		<?php isset($_GET['module']) ? include('modules/' . $_GET['module'] . '.php') : include('modules/dashboard.php'); ?>
 	</div>
 </body>
 </html>
