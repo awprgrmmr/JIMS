@@ -16,11 +16,9 @@ if (isset($_SESSION['username'])) header('Location: ./');
 		justify-content: center;
 		font: 15px Inconsolata, sans-serif;
 	}
-	#login {
-		width: 200px;
-	}
 	#login header {
 		font-size: 0.9em;
+		font-weight: bold;
 		letter-spacing: 1px;
 		margin-bottom: 1em;
 		text-align: center;
@@ -43,7 +41,6 @@ if (isset($_SESSION['username'])) header('Location: ./');
 		border-bottom-right-radius: 3px;
 		border-top-right-radius: 3px;
 		padding: 5px;
-		width: 176px;
 	}
 	</style>
 </head>
