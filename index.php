@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])) header('Location: login.php');
 		</section>
 	</header>
 	<div id="content">
-		<?php isset($_GET['module']) ? include('modules/' . $_GET['module'] . '.php') : include('modules/dashboard.php'); ?>
+		<?php isset($_GET['module']) && file_exists('modules/' . $_GET['module'] . '.php') ? include('modules/' . $_GET['module'] . '.php') : include('modules/dashboard.php'); ?>
 	</div>
 </body>
 </html>
