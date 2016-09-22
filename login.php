@@ -10,6 +10,12 @@ if (isset($_SESSION['username'])) header('Location: ./');
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
 	<style>
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font: 15px Inconsolata, sans-serif;
+	}
 	#login {
 		width: 200px;
 	}
