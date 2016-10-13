@@ -8,24 +8,27 @@ if (isset($_SESSION['email'])) header('Location: ./');
 # Login attempt
 if (isset($_POST['email'])) {
 
-	# Connect to mySQL database
-	require_once('server.php');
-	$connection = new mysqli($server['name'], $server['username'], $server['password'], $server['database']);
-	if ($connection->connect_error) die("Connection failed: " . $connection->connect_error);
-	
-	# Find user
-	$query = "SELECT password FROM users WHERE email=" . $_SERVER['email'];
-	$result = $conn->query($query);
-	
+	# Connect to SQLite3 database
+	$database = new SQLite3("jims.db");
+
+	# Query user's password
+	$query = "SELECT password FROM users WHERE email='" . $_POST['email'] . "'";
+	$result = $database->query($query);
+
 	# If user found, verify password
-	if ($result->num_rows == 1 && ($result = $result->fetch_assoc()))
-		if (password_verify($_POST['password'], $result['password']))
+	if ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+		if ($row['password'] == NULL) {
+			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+			$query = "UPDATE users SET password='$password' WHERE email='" . $_POST['email'] . "'";
+			$database->query($query);
+		}
+
+		if (password_verify($_POST['password'], $row['password']))
 			$_SESSION['email'] = $_POST['email'];
-		else echo "Password verification failed.";
-	else echo "User not found.";
-	
+	}
+
 	if (isset($_SESSION['email'])) header('Location: ./');
-	$connection->close();
+	else echo "Incorrect username or password.";
 }
 
 ?>
