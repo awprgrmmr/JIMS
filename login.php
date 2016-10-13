@@ -25,7 +25,7 @@ if (isset($_POST['email'])) {
 	else echo "User not found.";
 	
 	if (isset($_SESSION['email'])) header('Location: ./');
-	$conn->close();
+	$connection->close();
 }
 
 ?>
