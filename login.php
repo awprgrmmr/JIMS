@@ -1,8 +1,32 @@
 <?php
 
 session_start();
-if (isset($_POST['username'])) $_SESSION['username'] = $_POST['username'];
-if (isset($_SESSION['username'])) header('Location: ./');
+
+# If logged in, redirect to index
+if (isset($_SESSION['email'])) header('Location: ./');
+
+# Login attempt
+if (isset($_POST['email'])) {
+
+	# Connect to mySQL database
+	require_once('server.php');
+	$connection = new mysqli($server['name'], $server['username'], $server['password'], $server['database']);
+	if ($connection->connect_error) die("Connection failed: " . $connection->connect_error);
+	
+	# Find user
+	$query = "SELECT password FROM users WHERE email=" . $_SERVER['email'];
+	$result = $conn->query($query);
+	
+	# If user found, verify password
+	if ($result->num_rows == 1 && ($result = $result->fetch_assoc()))
+		if (password_verify($_POST['password'], $result['password']))
+			$_SESSION['email'] = $_POST['email'];
+		else echo "Password verification failed.";
+	else echo "User not found.";
+	
+	if (isset($_SESSION['email'])) header('Location: ./');
+	$conn->close();
+}
 
 ?>
 <head>
@@ -49,7 +73,7 @@ if (isset($_SESSION['username'])) header('Location: ./');
 <div id="login">
 	<header>JIMS LOGIN</header>
 	<form method="post" action="login.php">
-		<label for="username">U</label><input type="text" name="username" autocomplete="off"/>
+		<label for="email">E</label><input type="email" name="email" autocomplete="off"/>
 		<br>
 		<label for="password">P</label><input type="password" name="password" autocomplete="off"/>
 	</form>
