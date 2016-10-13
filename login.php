@@ -16,19 +16,24 @@ if (isset($_POST['email'])) {
 	$result = $database->query($query);
 
 	# If user found, verify password
-	if ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-		if ($row['password'] == NULL) {
+	if ($result = $result->fetchArray()) {
+
+		# Set password if not set
+		if ($result['password'] == NULL) {
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$query = "UPDATE users SET password='$password' WHERE email='" . $_POST['email'] . "'";
 			$database->query($query);
 		}
 
-		if (password_verify($_POST['password'], $row['password']))
+		# Verify password
+		if (password_verify($_POST['password'], $result['password'])) {
 			$_SESSION['email'] = $_POST['email'];
+			die();
+		}
 	}
 
 	if (isset($_SESSION['email'])) header('Location: ./');
-	else echo "Incorrect username or password.";
+	else die("Incorrect credentials.");
 }
 
 ?>
@@ -41,14 +46,16 @@ if (isset($_POST['email'])) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font: 15px Inconsolata, sans-serif;
+		font: 16px Inconsolata, sans-serif;
+	}
+	#login {
+		text-align: center;
+		width: 250px;
 	}
 	#login header {
-		font-size: 0.9em;
 		font-weight: bold;
 		letter-spacing: 1px;
-		margin-bottom: 1em;
-		text-align: center;
+		margin-bottom: 5px;
 	}
 	#login label {
 		background: #444444;
@@ -57,7 +64,7 @@ if (isset($_POST['email'])) {
 		border-top-left-radius: 3px;
 		color: #FFFFFF;
 		display: inline-block;
-		margin-bottom: 10px;
+		margin: 5px 0;
 		font-size: 12px;
 		padding: 6px 8px;
 		vertical-align: top;
@@ -67,7 +74,9 @@ if (isset($_POST['email'])) {
 		border: none;
 		border-bottom-right-radius: 3px;
 		border-top-right-radius: 3px;
+		margin: 5px 0;
 		padding: 5px;
+		width: 200px;
 	}
 	</style>
 </head>
@@ -75,16 +84,18 @@ if (isset($_POST['email'])) {
 
 <div id="login">
 	<header>JIMS LOGIN</header>
-	<form method="post" action="login.php">
+	<form method="post">
 		<label for="email">E</label><input type="email" name="email" autocomplete="off"/>
-		<br>
 		<label for="password">P</label><input type="password" name="password" autocomplete="off"/>
 	</form>
 	<script>
 		$("input").keypress(function(event) {
 		    if (event.which == 13) {
 		        event.preventDefault();
-		        $("form").submit();
+						$.post('login.php', $('form').serialize(), function(data) {
+							if (data != '') alert(data);
+							else location.reload();
+						});
 		    }
 		});
 	</script>
