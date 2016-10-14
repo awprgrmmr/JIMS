@@ -1,10 +1,15 @@
 <?php
 
 $root = $_SERVER['DOCUMENT_ROOT'];
-$path = $_SERVER['PATH_INFO'];
 
-if (!file_exists($_SERVER['DOCUMENT_ROOT'] . $_SERVER['PATH_INFO']))
-	header('Location: index.php?module=' . substr($_SERVER['PATH_INFO'], 1));
+if (isset($_SERVER['PATH_INFO']))
+	$path = $_SERVER['PATH_INFO'];
+else return false;
+
+if (!file_exists($root . $path)) {
+	$module = substr($path, 1);
+	require('index.php');
+}
 else return false;
 
 ?>
