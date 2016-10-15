@@ -1,25 +1,75 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
 
-html, body {
-    background: #DDD;
-    font: 14px Roboto, sans-serif;
-    height: 100%;
-    margin: 0;
+body {
+   background-color: #FFFFFF;
+   font: 14px 'Open Sans', sans-serif;
+   margin: 0;
 }
 a {
-    color: inherit;
-    text-decoration: none;
+   color: inherit;
+   text-decoration: none;
 }
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+   list-style: none;
+   margin: 0;
+   padding: 0;
 }
 form {
-    margin: 0;
+   margin: 0;
 }
 input {
-    font: inherit;
-    outline: none;
+	background-color: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	color: #666666;
+	font: inherit;
+	height: 28px;
+	outline: none;
+	padding: 0 8px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 980px;
+}
+.clearfix {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.content {
+	padding-top: 20px;
+}
+
+/* Header */
+header {
+   background-color: #F5F5F5;
+	border-bottom: 1px solid #E5E5E5;
+	padding: 10px 0;
+}
+header section,
+header section ul,
+header section ul li {
+	float: left;
+}
+header section ul li a {
+	display: block;
+	font-weight: bold;
+	padding: 4px 8px;
+}
+#icon, #search {
+	margin-right: 10px;
+}
+#search input {
+	width: 350px;
+}
+#user-links {
+   float: right;
+	font-size: 20px;
+}
+#user-links .fa-sign-out {
+   color: #F44336;
 }

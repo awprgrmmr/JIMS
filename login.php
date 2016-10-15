@@ -41,52 +41,16 @@ if (isset($_POST['email'])) {
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
-	<style>
-	body {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font: 16px Inconsolata, sans-serif;
-	}
-	#login {
-		text-align: center;
-		width: 250px;
-	}
-	#login header {
-		font-weight: bold;
-		letter-spacing: 1px;
-		margin-bottom: 5px;
-	}
-	#login label {
-		background: #444444;
-		border: 1px solid #FFFFFF;
-		border-bottom-left-radius: 3px;
-		border-top-left-radius: 3px;
-		color: #FFFFFF;
-		display: inline-block;
-		margin: 5px 0;
-		font-size: 12px;
-		padding: 6px 8px;
-		vertical-align: top;
-	}
-	#login input {
-		background: #FFFFFF;
-		border: none;
-		border-bottom-right-radius: 3px;
-		border-top-right-radius: 3px;
-		margin: 5px 0;
-		padding: 5px;
-		width: 200px;
-	}
-	</style>
+	<link href="css/login.css" rel="stylesheet">
 </head>
 <body>
 
 <div id="login">
-	<header>JIMS LOGIN</header>
 	<form method="post">
-		<label for="email">E</label><input type="email" name="email" autocomplete="off"/>
-		<label for="password">P</label><input type="password" name="password" autocomplete="off"/>
+		<label for="email">Email</label>
+		<input type="email" name="email" autocapitalize="off" autocorrect="off" autofocus/>
+		<label for="password">Password</label>
+		<input type="password" name="password" />
 	</form>
 	<script>
 		$("input").keypress(function(event) {
