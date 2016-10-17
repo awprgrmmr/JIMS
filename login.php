@@ -18,19 +18,12 @@ if (isset($_POST['email'])) {
 	# Check if user is found
 	if ($result = $result->fetchArray()) {
 
-		# Set password if not set
-		#if ($result['password'] == NULL) {
-		#	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-		#	$query = "UPDATE users SET password='$password' WHERE email='" . $_POST['email'] . "'";
-		#	$database->query($query);
-		#	die('Password set.');
-		#}
-
 		# Verify password
 		if (password_verify($_POST['password'], $result['password'])) {
 			$_SESSION['email'] = $_POST['email'];
 			die();
 		}
+		else die("Incorrect credentials.");
 
 	}
 	else die("Incorrect credentials.");
@@ -39,6 +32,7 @@ if (isset($_POST['email'])) {
 ?>
 <head>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="js/global.js" defer></script>
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/login.css" rel="stylesheet">
@@ -46,23 +40,13 @@ if (isset($_POST['email'])) {
 <body>
 
 <div id="login">
-	<form method="post">
+	<form action="login.php" method="post">
 		<label for="email">Email</label>
-		<input type="email" name="email" autocapitalize="off" autocorrect="off" autofocus/>
+		<input value="email@email.com" type="email" name="email" autocapitalize="off" autocorrect="off" autofocus/>
 		<label for="password">Password</label>
-		<input type="password" name="password" />
+		<input value="password" type="password" name="password" />
+		<input type="hidden" name="action" value="logout" />
 	</form>
-	<script>
-		$("input").keypress(function(event) {
-		    if (event.which == 13) {
-		        event.preventDefault();
-						$.post('login.php', $('form').serialize(), function(data) {
-							if (data != '') alert(data);
-							else location.reload();
-						});
-		    }
-		});
-	</script>
 </div>
 
 </body>

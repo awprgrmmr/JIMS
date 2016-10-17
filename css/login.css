@@ -10,10 +10,6 @@ body {
 	border-radius: 5px;
 	padding: 20px;
 }
-#login label {
-	display: block;
-	margin-bottom: 10px;
-}
 #login input {
 	margin-bottom: 15px;
 	width: 250px;

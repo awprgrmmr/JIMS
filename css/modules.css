@@ -4,24 +4,56 @@
     font-size: 14px;
     width: 100%;
 }
-tr:nth-child(2n) {
+#booking tr:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.1);
 }
-th, td {
+#booking th,
+#booking td {
     padding: 10px 8px;
 }
-th:nth-child(1), td:nth-child(1) {
+#booking th:nth-child(1),
+#booking td:nth-child(1) {
     text-align: center;
     width: 65px;
 }
-th:nth-child(2), td:nth-child(2) {
+#booking th:nth-child(2),
+#booking td:nth-child(2) {
     text-align: left;
     width: 180px;
 }
-th:nth-child(3), td:nth-child(3) {
+#booking th:nth-child(3),
+#booking td:nth-child(3) {
     text-align: center;
     width: 80px;
 }
-th:nth-child(4), td:nth-child(4) {
+#booking th:nth-child(4),
+#booking td:nth-child(4) {
     text-align: left;
+}
+#settings #manageusers ul li {
+	border-bottom: 1px solid #DDDDDD;
+	font-size: 12px;
+	padding: 10px;
+}
+#settings #manageusers ul li:last-child {
+	border-bottom: none;
+}
+#settings #manageusers ul li b {
+	display: block;
+	font-size: 14px;
+}
+#settings #manageusers button {
+	float: right;
+}
+#settings #manageusers button img {
+	height: 16px;
+	margin: 10px;
+	width: 12px;
+}
+#settings .boxed > div > form {
+	padding: 15px;
+}
+#settings input {
+	margin-bottom: 15px;
+	width: 250px;
 }

@@ -1,13 +1,16 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
 
+* { box-sizing: border-box; }
 body {
    background-color: #FFFFFF;
-   font: 14px 'Open Sans', sans-serif;
+	color: #333333;
+   font: 13px 'Open Sans', sans-serif;
    margin: 0;
+	min-width: 1020px;
 }
 a {
-   color: inherit;
+   color: #4078C0;
    text-decoration: none;
 }
 ul {
@@ -29,10 +32,23 @@ input {
 	outline: none;
 	padding: 0 8px;
 }
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+	outline: none;
+	padding: 0;
+}
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
 
 .container {
 	margin: 0 auto;
-	width: 980px;
+	width: 1000px;
 }
 .clearfix {
 	clear: both;
@@ -40,9 +56,38 @@ input {
 	display: table;
 }
 
-.content {
-	padding-top: 20px;
+.content { padding-top: 20px; }
+
+.columns { margin: 0 -10px; }
+.column {
+	float: left;
+	padding: 0 10px;
 }
+.one-fourth { width: 25%; }
+.three-fourths { width: 75%; }
+
+.boxed {
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	color: #666666;
+	margin-bottom: 30px;
+}
+.boxed > h3 {
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #DDDDDD;
+	color: #333333;
+	font-size: inherit;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px 10px;
+}
+.boxed > a {
+   display: block;
+   padding: 8px 10px;
+   border-bottom: 1px solid #DDDDDD;
+}
+.boxed > a:hover { background-color: #F5F5F5; }
+.boxed > a:last-child { border-bottom: none; }
 
 /* Header */
 header {
@@ -56,8 +101,11 @@ header section ul li {
 	float: left;
 }
 header section ul li a {
-	display: block;
+	color: inherit;
 	font-weight: bold;
+}
+header section ul li > * {
+	display: block;
 	padding: 4px 8px;
 }
 #icon, #search {
