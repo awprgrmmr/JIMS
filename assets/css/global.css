@@ -1,0 +1,200 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
+
+* { box-sizing: border-box; }
+body {
+	color: #333333;
+   font: 13px 'Open Sans', sans-serif;
+   margin: 0;
+	min-width: 1020px;
+}
+a {
+   color: #4078C0;
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+form {
+   margin: 0;
+}
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+input {
+	background-color: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	color: #666666;
+	font: inherit;
+	height: 28px;
+	outline: none;
+	padding: 0 8px;
+}
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+	outline: none;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1000px;
+}
+.clearfix {
+	clear: both;
+	content: "";
+	display: table;
+}
+.content { padding-top: 20px; }
+.columns { margin: 0 -10px; }
+.column {
+	float: left;
+	padding: 0 10px;
+}
+.one-fourth { width: 25%; }
+.three-fourths { width: 75%; }
+.boxed {
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	color: #666666;
+	margin-bottom: 30px;
+}
+.boxed > h3 {
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #DDDDDD;
+	color: #333333;
+	font-size: inherit;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px 10px;
+}
+.boxed > a {
+   display: block;
+   padding: 8px 10px;
+   border-bottom: 1px solid #DDDDDD;
+}
+.boxed > a:hover { background-color: #F5F5F5; }
+.boxed > a:last-child { border-bottom: none; }
+
+/* Header */
+header {
+   background-color: #F5F5F5;
+	border-bottom: 1px solid #E5E5E5;
+	padding: 10px 0;
+}
+header section,
+header section ul,
+header section ul li {
+	float: left;
+}
+header section ul li a {
+	color: inherit;
+	font-weight: bold;
+}
+header section ul li > * {
+	display: block;
+	padding: 4px 8px;
+}
+#icon, #search {
+	margin-right: 10px;
+}
+#search input {
+	width: 350px;
+}
+#user-links {
+   float: right;
+	font-size: 20px;
+}
+#user-links .fa-sign-out {
+   color: #F44336;
+}
+
+/* Login */
+.login-page {
+	background-color: #F5F5F5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login-page form {
+	background-color: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	padding: 20px;
+}
+.login-page form input {
+	margin-bottom: 15px;
+	width: 250px;
+}
+
+/* Booking */
+#booking table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+    width: 100%;
+}
+#booking tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#booking th,
+#booking td {
+    padding: 10px 8px;
+}
+#booking th:nth-child(1),
+#booking td:nth-child(1) {
+    text-align: center;
+    width: 65px;
+}
+#booking th:nth-child(2),
+#booking td:nth-child(2) {
+    text-align: left;
+    width: 180px;
+}
+#booking th:nth-child(3),
+#booking td:nth-child(3) {
+    text-align: center;
+    width: 80px;
+}
+#booking th:nth-child(4),
+#booking td:nth-child(4) {
+    text-align: left;
+}
+
+/* Settings */
+#settings #manageusers ul li {
+	border-bottom: 1px solid #DDDDDD;
+	font-size: 12px;
+	padding: 10px;
+}
+#settings #manageusers ul li:last-child {
+	border-bottom: none;
+}
+#settings #manageusers ul li b {
+	display: block;
+	font-size: 14px;
+}
+#settings #manageusers button {
+	float: right;
+}
+#settings #manageusers button img {
+	height: 16px;
+	margin: 10px;
+	width: 12px;
+}
+#settings .boxed > div > form {
+	padding: 15px;
+}
+#settings input {
+	margin-bottom: 15px;
+	width: 250px;
+}

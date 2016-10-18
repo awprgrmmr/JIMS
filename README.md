@@ -1,3 +1,7 @@
-# JIMS
+# JIMS - Jail Information Management System
 
-When the master branch is changed, the site is automatically updated [here](https://prgrmmr.me/jims/).
+JIMS is a replacement system for the antiquated sheriff’s department booking and inmate management systems. These are the major capabilities for the system:
+- [ ] Detention processing
+- [ ] Trust accounting
+- [ ] Property management
+- [ ] Sentence calculation
