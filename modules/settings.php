@@ -1,7 +1,4 @@
-<?php
-# Connect to SQLite3 database
-$database = new SQLite3("jims.db");
-?>
+<?php $db = new SQLite3("assets/data/jims.db"); ?>
 <div id="settings" class="columns">
 	<div class="column one-fourth">
 		<nav class="boxed">
@@ -14,23 +11,20 @@ $database = new SQLite3("jims.db");
 		<div id="manageusers" class="boxed">
 			<h3>Manage users</h3>
 			<div>
-				<?php
-
-				# Query all users for name
-				$query = "SELECT id,email,name FROM users";
-				$result = $database->query($query);
-
-				while ($user = $result->fetchArray()) {
-					$users .= "<li>";
-					$users .= "<form action='actions.php'><input type='hidden' name='action' value='deleteuser' /><input type='hidden' name='id' value='" . $user['id'] . "' />";
-					$users .= '<button type="submit"><img src="images/close.svg" width="16" /></button>';
-					$users .= "</form>";
-					$users .= "<b>" . $user['name'] . "</b>";
-					$users .= $user['email'];
-					$users .= "</li>";
-				}
-				echo "<ul>" . $users . "</ul>"
-				?>
+				<?php $result = $db->query("SELECT id, email, name FROM users"); ?>
+				<ul>
+					<?php while ($user = $result->fetchArray()) : ?>
+					<li>
+						<form action="actions.php">
+							<input type="hidden" name="action" value="deleteuser" />
+							<input type="hidden" name="id" value="<?php echo $user['id']; ?>" />
+							<button type="submit"><img src="assets/images/close.svg" width="16" /></button>
+						</form>
+						<b><?php echo $user['name']; ?></b>
+						<?php echo $user['email']; ?>
+					</li>
+					<?php endwhile; ?>
+				</ul>
 			</div>
 		</div>
 		<div id="adduser" class="boxed">
@@ -41,7 +35,7 @@ $database = new SQLite3("jims.db");
 					<label for="name">Name</label>
 					<input type="text" name="name" />
 					<label for="email">Email</label>
-					<input type="email" name="email" autocapitalize="off" autocorrect="off" />
+					<input type="email" name="email" />
 					<label for="password">Password</label>
 					<input type="password" name="password" />
 				</form>

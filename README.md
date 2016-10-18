@@ -5,9 +5,3 @@ JIMS is a replacement system for the antiquated sheriff’s department booking a
 - [ ] Trust accounting
 - [ ] Property management
 - [ ] Sentence calculation
-
-## Usage
-For PHP CLI, execute using the following:
-```
-php -S localhost:8000 routing.php
-```
