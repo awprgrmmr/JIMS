@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <html>
 <head>
-	<link rel="icon" href="images/jail.ico" type="image/x-icon" />
+	<link rel="icon" href="assets/images/jail.ico" type="image/x-icon" />
 	<script src="vendors/jquery/jquery-3.1.1.min.js"></script>
 	<script src="assets/js/global.js" defer></script>
 	<link href="assets/css/global.css" rel="stylesheet">
