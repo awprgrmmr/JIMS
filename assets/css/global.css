@@ -146,11 +146,6 @@ header section ul li > * {
 	border-radius: 2px;
    width: 100%;
 }
-#booking th,
-#booking td {
-	padding: 6px 4px;
-	text-align: left;
-}
 #booking th:first-child,
 #booking td:first-child {
 	padding-left: 10px;
@@ -160,11 +155,14 @@ header section ul li > * {
 	border-bottom: 1px solid #DDDDDD;
 	border-top-left-radius: 2px;
 	border-top-right-radius: 2px;
+	padding: 8px 4px;
+	text-align: left;
 }
 #booking td {
 	border-bottom: 1px solid #EEEEEE;
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
+	padding: 6px 4px;
 }
 #booking tr:last-child td { border-bottom: none; }
 #booking tr:hover td { background: #F5F5F5; }
