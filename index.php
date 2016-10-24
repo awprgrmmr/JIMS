@@ -1,8 +1,8 @@
-<?php session_start(); ?>
+<?php session_start(); chdir(dirname(__FILE__)); ?>
 <html>
 <head>
 	<link rel="icon" href="assets/images/jail.ico" type="image/x-icon" />
-	<script src="vendors/jquery/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="assets/js/global.js" defer></script>
 	<link href="assets/css/global.css" rel="stylesheet">
 </head>
