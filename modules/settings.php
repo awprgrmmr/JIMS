@@ -43,9 +43,5 @@
 				</form>
 			</div>
 		</div>
-		<div class="boxed">
-			<h3>Edit roles</h3>
-			<div></div>
-		</div>
 	</div>
 </div>
