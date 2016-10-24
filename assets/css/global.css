@@ -44,6 +44,10 @@ button {
 	outline: none;
 	padding: 0;
 }
+table {
+	border-spacing: 0;
+	font-size: inherit;
+}
 
 .container {
 	margin: 0 auto;
@@ -138,37 +142,35 @@ header section ul li > * {
 
 /* Booking */
 #booking table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 14px;
-    width: 100%;
-}
-#booking tr:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.1);
+	border: 1px solid #DDDDDD;
+	border-radius: 2px;
+   width: 100%;
 }
 #booking th,
 #booking td {
-    padding: 10px 8px;
+	padding: 6px 4px;
+	text-align: left;
 }
-#booking th:nth-child(1),
-#booking td:nth-child(1) {
-    text-align: center;
-    width: 65px;
+#booking th:first-child,
+#booking td:first-child {
+	padding-left: 10px;
 }
-#booking th:nth-child(2),
-#booking td:nth-child(2) {
-    text-align: left;
-    width: 180px;
+#booking th {
+	background: #F5F5F5;
+	border-bottom: 1px solid #DDDDDD;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
 }
-#booking th:nth-child(3),
-#booking td:nth-child(3) {
-    text-align: center;
-    width: 80px;
+#booking td {
+	border-bottom: 1px solid #EEEEEE;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
-#booking th:nth-child(4),
-#booking td:nth-child(4) {
-    text-align: left;
-}
+#booking tr:last-child td { border-bottom: none; }
+#booking tr:hover td { background: #F5F5F5; }
+#booking td.id { width: 65px; }
+#booking td.name { width: 200px; }
+#booking td.offense { color: #888888; }
 
 /* Settings */
 #settings #manageusers ul li {
