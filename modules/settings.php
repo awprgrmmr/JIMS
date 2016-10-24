@@ -18,7 +18,9 @@
 						<form action="actions.php">
 							<input type="hidden" name="action" value="deleteuser" />
 							<input type="hidden" name="id" value="<?php echo $user['id']; ?>" />
-							<button type="submit"><img src="assets/images/close.svg" width="16" /></button>
+							<?php if ($user['email'] != 'email@email.com') : ?>
+								<button type="submit"><img src="assets/images/close.svg" width="16" /></button>
+							<?php endif; ?>
 						</form>
 						<b><?php echo $user['name']; ?></b>
 						<?php echo $user['email']; ?>
