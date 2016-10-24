@@ -13,7 +13,8 @@ switch ($_POST['action']) {
 }
 
 function adduser($db) {
-	$stmt = $db->prepare("INSERT INTO users (email, password) VALUES (:email, :password)");
+	$stmt = $db->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
+	$stmt->bindValue(':name', $_POST['name']);
 	$stmt->bindValue(':password', password_hash($_POST['password'], PASSWORD_DEFAULT));
 	$stmt->bindValue(':email', $_POST['email']);
 	$stmt->execute();
