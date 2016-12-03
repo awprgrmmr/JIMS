@@ -11,7 +11,7 @@ $("input").keypress(function(event) {
 
 $('form').submit(function(event) {
 	event.preventDefault();
-	$.post($(this).attr('action'), $(this).serialize(), function(data) {
+	$.post('actions.php', $(this).serialize(), function(data) {
 		if (data != '') console.log(data);
 		else location.reload();
 	});

@@ -1,10 +1,9 @@
 <?php $db = new SQLite3("assets/data/jims.db"); ?>
-<div id="settings" class="columns">
+<div class="columns">
 	<div class="column one-fourth">
 		<nav class="boxed">
 			<h3>Settings</h3>
-			<a href="#account">Account</a>
-			<a href="#users">User Management</a>
+			<a class="active">User Management</a>
 		</nav>
 	</div>
 	<div class="column three-fourths">
@@ -15,7 +14,7 @@
 				<ul>
 					<?php while ($user = $result->fetchArray()) : ?>
 					<li>
-						<form action="actions.php">
+						<form>
 							<input type="hidden" name="action" value="deleteuser" />
 							<input type="hidden" name="id" value="<?php echo $user['id']; ?>" />
 							<?php if ($user['email'] != 'email@email.com') : ?>

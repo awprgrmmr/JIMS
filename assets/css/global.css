@@ -32,8 +32,10 @@ input {
 	color: #666666;
 	font: inherit;
 	height: 28px;
+	margin-bottom: 15px;
 	outline: none;
 	padding: 0 8px;
+	width: 250px;
 }
 input[type=submit] { cursor: pointer; }
 button {
@@ -87,7 +89,14 @@ table {
    border-bottom: 1px solid #DDDDDD;
 }
 .boxed > a:hover { background-color: #F5F5F5; }
+.boxed > a.active {
+	color: inherit;
+	cursor: default;
+	font-weight: bold;
+}
+.boxed > a.active:hover { background: none; }
 .boxed > a:last-child { border-bottom: none; }
+.boxed > div { padding: 15px; }
 
 /* Header */
 header {
@@ -112,6 +121,7 @@ header section ul li > * {
 	margin-right: 10px;
 }
 #search input {
+	margin-bottom: 0;
 	width: 350px;
 }
 #user-links {
@@ -123,23 +133,21 @@ header section ul li > * {
 }
 
 /* Login */
-.login-page {
+#login-page {
 	background-color: #F5F5F5;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.login-page form {
+#login-page header { display: none; }
+#login-page .container { width: auto; }
+#login-page form {
 	background-color: #FFFFFF;
 	border: 1px solid #DDDDDD;
 	border-radius: 5px;
 	padding: 20px;
 }
-.login-page form input {
-	margin-bottom: 15px;
-	width: 250px;
-}
-.login-page form input[type=submit] {
+#login-page form input[type=submit] {
 	background-color: #4078C0;
 	border: none;
 	color: white;
@@ -148,56 +156,58 @@ header section ul li > * {
 }
 
 /* Booking */
-#booking table {
+#inmates-page table {
 	border: 1px solid #DDDDDD;
 	border-radius: 2px;
    width: 100%;
 }
-#booking th:first-child,
-#booking td:first-child {
+#inmates-page th:first-child,
+#inmates-page td:first-child {
 	padding-left: 10px;
 }
-#booking th {
+#inmates-page th {
 	padding: 8px 4px;
 	text-align: left;
 }
-#booking td {
+#inmates-page td {
 	border-bottom: 1px solid #EEEEEE;
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
 	padding: 6px 4px;
 }
-#booking tr:last-child td { border-bottom: none; }
-#booking tr:hover td { background: #F5F5F5; }
-#booking td.id { width: 65px; }
-#booking td.name { width: 200px; }
-#booking td.offense { color: #888888; }
+#inmates-page tr:last-child td { border-bottom: none; }
+#inmates-page tr:hover td { background: #F5F5F5; }
+#inmates-page td.id { width: 65px; }
+#inmates-page td.name { width: 200px; }
+#inmates-page td.offense { color: #888888; }
+#inmates-page .inmate input { margin-right: 10px; }
+#inmates-page .inmate .offenses {
+	list-style: disc;
+	margin-left: 25px;
+}
+#inmates-page .inmate .offenses li { padding: 5px 0; }
+#inmates-page .inmate .offenses li span.offense {
+	float: left;
+	width: 350px;
+}
 
 /* Settings */
-#settings #manageusers ul li {
+#settings-page #manageusers ul li {
 	border-bottom: 1px solid #DDDDDD;
 	font-size: 12px;
-	padding: 10px;
 }
-#settings #manageusers ul li:last-child {
+#settings-page #manageusers ul li:last-child {
 	border-bottom: none;
 }
-#settings #manageusers ul li b {
+#settings-page #manageusers ul li b {
 	display: block;
 	font-size: 14px;
 }
-#settings #manageusers button {
+#settings-page #manageusers button {
 	float: right;
 }
-#settings #manageusers button img {
+#settings-page #manageusers button img {
 	height: 16px;
 	margin: 10px;
 	width: 12px;
-}
-#settings .boxed > div > form {
-	padding: 15px;
-}
-#settings input {
-	margin-bottom: 15px;
-	width: 250px;
 }
