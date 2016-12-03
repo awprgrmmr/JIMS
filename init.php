@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 
 $base = substr(__DIR__, strlen(dirname(__DIR__)));
 $root = $_SERVER['SERVER_NAME'] . $base;
