@@ -24,7 +24,7 @@ label {
 	font-weight: bold;
 	margin-bottom: 10px;
 }
-input {
+input, select {
 	background-color: #FFFFFF;
 	border: 1px solid #DDDDDD;
 	border-radius: 3px;
@@ -152,7 +152,7 @@ header section ul li > * {
 	border: none;
 	color: white;
 	font-weight: bold;
-	margin-top: 5px;
+	margin: 5px 0;
 }
 
 /* Booking */
@@ -180,8 +180,19 @@ header section ul li > * {
 #inmates-page td.id { width: 65px; }
 #inmates-page td.name { width: 200px; }
 #inmates-page td.offense { color: #888888; }
-#inmates-page .inmate input { margin-right: 10px; }
-#inmates-page .inmate .offenses {
+#inmates-page .inmate input,
+#inmates-page .inmate select {
+	margin-left: 5px;
+	margin-right: 10px;
+	width: 150px;
+}
+#inmates-page .inmate form > span {
+	display: inline-block;
+	text-align: right;
+	width: 125px;
+}
+#inmates-page .inmate .offenses,
+#inmates-page .inmate .property {
 	list-style: disc;
 	margin-left: 25px;
 }
