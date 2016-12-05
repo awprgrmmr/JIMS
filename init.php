@@ -11,7 +11,7 @@ $query = isset($_GET['query']) ? $_GET['query'] : false;
 
 include('functions.php');
 
-if (!credentialsRequired() && isLoggedIn()) header("Location: //$root");
+if ($module == 'login' && isLoggedIn()) header("Location: //$root");
 if (credentialsRequired() && !isLoggedIn()) header("Location: //$root/login");
 
 $db = new SQLite3("assets/data/jims.db");

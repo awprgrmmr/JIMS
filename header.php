@@ -1,7 +1,7 @@
 <header>
   <div class="container clearfix">
     <section id="icon">
-      <a href="."><img src="<?php rootPath('assets/images/jail.svg'); ?>" width="28"></a>
+      <a href="."><img src="assets/images/jail.svg" width="28"></a>
     </section>
     <section id="search">
       <form action="search.php"><input type="text" placeholder="Search" /></form>
@@ -17,7 +17,7 @@
         <li>
           <form>
             <input type="hidden" name="action" value="logout">
-            <button type="submit"><i class="fa fa-sign-out"></i></button>
+            <i class="fa fa-sign-out submit"></i>
           </form>
         </li>
       </ul>

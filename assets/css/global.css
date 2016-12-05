@@ -8,22 +8,18 @@ body {
 	margin: 0;
 	min-width: 1020px;
 }
-
 a {
 	color: #4078C0;
 	text-decoration: none;
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 form { margin: 0; }
 label {
 	display: block;
 	font-weight: bold;
-	margin-bottom: 10px;
+	margin: 10px 0 5px;
 }
+label:first-child { margin-top: 0; }
+ul { padding: 0; }
 input, select {
 	background-color: #FFFFFF;
 	border: 1px solid #DDDDDD;
@@ -31,25 +27,25 @@ input, select {
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 	color: #666666;
 	font: inherit;
-	height: 28px;
-	margin-bottom: 15px;
+	margin: 0;
 	outline: none;
-	padding: 0 8px;
-	width: 250px;
+	padding: 4px 8px;
 }
-input[type=submit] { cursor: pointer; }
-button {
-	background: none;
-	border: none;
+button, input[type=submit] {
+	border: 1px solid #D5D5D5;
+	border-radius: 3px;
+	box-shadow: none;
+	background: linear-gradient(#FCFCFC, #EEEEEE);
 	cursor: pointer;
-	font: inherit;
-	outline: none;
-	padding: 0;
+	font-weight: bold;
+	margin-top: 15px;
+	padding: 6px 12px;
 }
 table {
 	border-spacing: 0;
 	font-size: inherit;
 }
+th { text-align: left; }
 
 .container {
 	margin: 0 auto;
@@ -60,8 +56,10 @@ table {
 	content: "";
 	display: table;
 }
-.content { padding-top: 20px; }
-.columns { margin: 0 -10px; }
+.columns {
+	margin: 0 -10px;
+	width: 100%;
+}
 .column {
 	float: left;
 	padding: 0 10px;
@@ -71,17 +69,19 @@ table {
 .boxed {
 	border: 1px solid #DDDDDD;
 	border-radius: 3px;
-	color: #666666;
 	margin-bottom: 30px;
 }
 .boxed > h3, th {
 	background-color: #F5F5F5;
 	border-bottom: 1px solid #DDDDDD;
-	color: #333333;
 	font-size: inherit;
 	font-weight: bold;
 	margin: 0;
 	padding: 8px 10px;
+}
+.boxed > div {
+	color: #666666;
+	padding: 15px;
 }
 .boxed > a {
    display: block;
@@ -90,18 +90,19 @@ table {
 }
 .boxed > a:hover { background-color: #F5F5F5; }
 .boxed > a.active {
-	color: inherit;
-	cursor: default;
+	color: #666666;
 	font-weight: bold;
 }
 .boxed > a.active:hover { background: none; }
 .boxed > a:last-child { border-bottom: none; }
-.boxed > div { padding: 15px; }
+.fa { font-size: 18px; }
+.submit { cursor: pointer; }
 
 /* Header */
 header {
-   background-color: #F5F5F5;
+	background-color: #F5F5F5;
 	border-bottom: 1px solid #E5E5E5;
+	margin-bottom: 20px;
 	padding: 10px 0;
 }
 header section,
@@ -109,28 +110,23 @@ header section ul,
 header section ul li {
 	float: left;
 }
-header section ul li a {
+header section { margin-right: 10px; }
+header section:last-child { margin-right: 0; }
+header section ul {
+	list-style: none;
+	margin: 0;
+}
+header section li > * {
+	display: block;
+	padding: 5px 8px;
+}
+header section li > a {
 	color: inherit;
 	font-weight: bold;
 }
-header section ul li > * {
-	display: block;
-	padding: 4px 8px;
-}
-#icon, #search {
-	margin-right: 10px;
-}
-#search input {
-	margin-bottom: 0;
-	width: 350px;
-}
-#user-links {
-   float: right;
-	font-size: 20px;
-}
-#user-links .fa-sign-out {
-   color: #F44336;
-}
+header section#search input { width: 200px; }
+header section#user-links { float: right; }
+header section#user-links .fa-sign-out { color: #F44336; }
 
 /* Login */
 #login-page {
@@ -139,86 +135,78 @@ header section ul li > * {
 	align-items: center;
 	justify-content: center;
 }
-#login-page header { display: none; }
-#login-page .container { width: auto; }
 #login-page form {
 	background-color: #FFFFFF;
 	border: 1px solid #DDDDDD;
 	border-radius: 5px;
 	padding: 20px;
+	width: 250px;
 }
+#login-page form input { width: 100%; }
 #login-page form input[type=submit] {
-	background-color: #4078C0;
+	background: #4078C0;
 	border: none;
 	color: white;
-	font-weight: bold;
-	margin: 5px 0;
 }
 
-/* Booking */
+/* Inmates */
 #inmates-page table {
 	border: 1px solid #DDDDDD;
 	border-radius: 2px;
-   width: 100%;
+	width: 100%;
 }
 #inmates-page th:first-child,
 #inmates-page td:first-child {
 	padding-left: 10px;
 }
-#inmates-page th {
-	padding: 8px 4px;
-	text-align: left;
-}
 #inmates-page td {
 	border-bottom: 1px solid #EEEEEE;
-	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
-	padding: 6px 4px;
+	padding: 6px 10px;
 }
 #inmates-page tr:last-child td { border-bottom: none; }
 #inmates-page tr:hover td { background: #F5F5F5; }
 #inmates-page td.id { width: 65px; }
 #inmates-page td.name { width: 200px; }
 #inmates-page td.offense { color: #888888; }
-#inmates-page .inmate input,
-#inmates-page .inmate select {
+
+/* Inmate *Needs reformatting* */
+#inmate-page .boxed input,
+#inmate-page select {
 	margin-left: 5px;
 	margin-right: 10px;
 	width: 150px;
 }
-#inmates-page .inmate form > span {
+#inmate-page input[type=submit] { width: auto; }
+#inmate-page form > span {
 	display: inline-block;
 	text-align: right;
 	width: 125px;
 }
-#inmates-page .inmate .offenses,
-#inmates-page .inmate .property {
-	list-style: disc;
+#inmate-page .offenses,
+#inmate-page .property {
 	margin-left: 25px;
 }
-#inmates-page .inmate .offenses li { padding: 5px 0; }
-#inmates-page .inmate .offenses li span.offense {
-	float: left;
-	width: 350px;
-}
+#inmate-page .offenses li { padding: 5px 0; }
+#inmate-page .offenses [name=charge],
+#inmate-page .property [name=description] {
+	 width: 300px;
+ }
 
 /* Settings */
+#settings-page #manageusers ul {
+	list-style: none;
+	margin: 0;
+}
 #settings-page #manageusers ul li {
 	border-bottom: 1px solid #DDDDDD;
-	font-size: 12px;
+	padding: 5px;
 }
-#settings-page #manageusers ul li:last-child {
-	border-bottom: none;
-}
+#settings-page #manageusers ul li:last-child { border-bottom: none; }
 #settings-page #manageusers ul li b {
 	display: block;
 	font-size: 14px;
 }
-#settings-page #manageusers button {
+#settings-page #manageusers ul li i {
 	float: right;
-}
-#settings-page #manageusers button img {
-	height: 16px;
-	margin: 10px;
-	width: 12px;
+	padding: 10px 5px;
 }
