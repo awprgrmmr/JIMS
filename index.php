@@ -1,4 +1,4 @@
-<?php require_once('init.php'); ?>
+<?php include('init.php'); ?>
 <html>
 <head>
 	<base href="<?php rootPath(''); ?>" />
@@ -13,7 +13,7 @@
 
 <div id="main">
 	<div class="content container clearfix">
-		<?php include("modules/$module.php"); ?>
+		<?php file_exists("modules/$module.php") ? include("modules/$module.php") : include("modules/dashboard.php"); ?>
 	</div>
 </div>
 

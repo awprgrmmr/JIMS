@@ -1,4 +1,3 @@
-<?php $db = new SQLite3("assets/data/jims.db"); ?>
 <div class="columns">
 	<div class="column one-fourth">
 		<nav class="boxed">
