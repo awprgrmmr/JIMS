@@ -12,6 +12,20 @@
       <span>First name</span><?php Input('first_name', $inmate['first_name']); ?>
       <span>Middle name</span><?php Input('middle_name', $inmate['middle_name']); ?>
       <span>Last name</span><?php Input('last_name', $inmate['last_name']); ?>
+      <span>SSN#</span><?php Input('ssn', $inmate['ssn']); ?>
+      <span>DL#</span><?php Input('dl', $inmate['dl']); ?>
+      <span>Foreign?</span><select name="foreign">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <span>Date of Birth</span><?php Input('dob', date('Y-m-d', $inmate['dob']), 'date'); ?>
+      <span>Birthplace</span><?php Input('birthplace', $inmate['birthplace']); ?>
+      <span>AKAs</span><?php Input('aka', $inmate['aka']); ?>
+      <span>Education</span><?php Input('education', $inmate['education']); ?>
+      <span>Occupation</span><?php Input('occupation', $inmate['occupation']); ?>
+      <span>Emergency Contact</span><?php Input('contact', $inmate['contact']); ?>
+      <span>Permanent Address</span><?php Input('perm_address', $inmate['perm_address']); ?>
+      <span>Temporary Address</span><?php Input('temp_address', $inmate['temp_address']); ?>
       <label>Physical Description</label>
       <span>Sex</span><select name="sex">
         <option value="male"<?php if ($inmate['sex'] == 'male') echo ' selected'; ?>>Male</option>
@@ -27,6 +41,10 @@
         <li>
           <?php Input('charge', $offense['charge']); ?>
           <?php Input('datetime', date('Y-m-d', $offense['datetime']), 'date'); ?>
+          <?php Input('agency', $offense['agency']); ?>
+          <?php Input('documents', $offense['documents']); ?>
+          <?php Input('clerk', $offense['clerk']); ?>
+          <?php Input('officer', $offense['officer']); ?>
         </li>
         <?php //while ($offense = $offenses->fetchArray()) : ?>
           <!--<li>

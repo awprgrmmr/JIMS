@@ -48,23 +48,38 @@ function logout() {
 }
 
 function updateInmate($db) {
-	$stmt = $db->prepare("INSERT INTO inmates (last_name, first_name, middle_name, sex, height, weight) VALUES (:last_name, :first_name, :middle_name, :sex, :height, :weight)");
+	$stmt = $db->prepare("INSERT INTO inmates (last_name, first_name, middle_name, aka, sex, perm_address, temp_address, ssn, dob, sex, height, weight, `foreign`, birthplace, dl, contact, occupation, education) VALUES (:last_name, :first_name, :middle_name, :aka, :sex, :perm_address, :temp_address, :ssn, :dob, :sex, :height, :weight, :frgn, :birthplace, :dl, :contact, :occupation, :education)");
 	$stmt->bindValue(':last_name', $_POST['last_name']);
 	$stmt->bindValue(':first_name', $_POST['first_name']);
 	$stmt->bindValue(':middle_name', $_POST['middle_name']);
+	$stmt->bindValue(':aka', $_POST['aka']);
+	$stmt->bindValue(':perm_address', $_POST['perm_address']);
+	$stmt->bindValue(':temp_address', $_POST['temp_address']);
+	$stmt->bindValue(':ssn', $_POST['ssn']);
+	$stmt->bindValue(':dob', $_POST['dob']);
 	$stmt->bindValue(':sex', $_POST['sex']);
 	$stmt->bindValue(':height', $_POST['height']);
 	$stmt->bindValue(':weight', $_POST['weight']);
+	$stmt->bindValue(':frgn', $_POST['foreign']);
+	$stmt->bindValue(':birthplace', $_POST['birthplace']);
+	$stmt->bindValue(':dl', $_POST['dl']);
+	$stmt->bindValue(':contact', $_POST['contact']);
+	$stmt->bindValue(':occupation', $_POST['occupation']);
+	$stmt->bindValue(':education', $_POST['education']);
 	$stmt->execute();
 	$stmt->close();
 
 	$query = $db->query("SELECT seq FROM sqlite_sequence WHERE name='inmates'");
 	$id = $query->fetchArray();
 
-	$stmt = $db->prepare("INSERT INTO booking (inmate, `datetime`, charge) VALUES (:inmate, :now, :charge)");
+	$stmt = $db->prepare("INSERT INTO booking (inmate, `datetime`, charge, agency, documents, clerk, officer) VALUES (:inmate, :now, :charge, :agency, :documents, :clerk, :officer)");
 	$stmt->bindValue(':inmate', $id['seq']);
 	$stmt->bindValue(':now', time());
 	$stmt->bindValue(':charge', $_POST['charge']);
+	$stmt->bindValue(':agency', $_POST['agency']);
+	$stmt->bindValue(':documents', $_POST['documents']);
+	$stmt->bindValue(':clerk', $_POST['clerk']);
+	$stmt->bindValue(':officer', $_POST['officer']);
 	$stmt->execute();
 	$stmt->close();
 
